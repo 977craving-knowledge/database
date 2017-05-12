@@ -1,0 +1,11 @@
+--@E:\Bosco\database\Topic13\constraint12.2.txt;
+
+--Sandesh Gautam
+
+/*ALTER TABLE trainers ADD(
+	car_reg		VARCHAR2(20) NOT NULL
+);*/
+
+ALTER TABLE trainers DROP(
+	car_reg
+);

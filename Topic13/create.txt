@@ -1,0 +1,18 @@
+
+-- @E:\Bosco\database\Topic13\create.txt
+
+CREATE TABLE teacher(
+	teacher_id	NUMBER(6),
+	first_name	VARCHAR2(15) NOT NULL,
+	last_name	VARCHAR2(15),
+	gender		CHAR DEFAULT 'M'
+);
+
+CREATE TABLE student(
+	student_id	NUMBER(6),
+	first_name	VARCHAR2(15) NOT NULL,
+	last_name	VARCHAR2(15),
+	email_id	VARCHAR2(25) NOT NULL,
+	contact_number	NUMBER(10),
+	teacher_id	NUMBER(6)
+);

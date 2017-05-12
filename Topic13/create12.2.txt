@@ -1,0 +1,13 @@
+--@E:\Bosco\database\Topic13\create12.2.txt;
+
+
+--Sandesh Gautam
+
+CREATE TABLE trainers(
+	trainer_id		NUMBER(6),
+	t_firstname		VARCHAR2(15),
+	t_surname		VARCHAR2(15),
+	mentor_id		NUMBER(6),
+	contact_no		NUMBER(10),
+	rate			NUMBER(1,3)
+);

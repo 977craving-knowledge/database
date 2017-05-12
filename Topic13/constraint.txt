@@ -1,0 +1,8 @@
+ALTER TABLE teacher
+ADD CONSTRAINT pk_teacher
+PRIMARY KEY(teacher_id);
+
+ALTER TABLE student
+ADD CONSTRAINT fk_s_teacher
+FOREIGN KEY(teacher_id)
+REFERENCES teacher(teacher_id);
