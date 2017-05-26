@@ -1,7 +1,0 @@
---@E:\Bosco\database\Topic13\constraint12.txt;
-
---SANDESH GAUTAM
-
-ALTER TABLE trainers MODIFY(
-	contact_no		NUMBER(10) NOT NULL
-);

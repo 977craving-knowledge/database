@@ -1,0 +1,56 @@
+--@E:\Bosco\database\Topic13\alter.txt;
+
+--SANDESH GAUTAM
+
+ALTER TABLE teacher
+ADD CONSTRAINT pk_teacher
+PRIMARY KEY(teacher_id);
+
+ALTER TABLE student
+ADD CONSTRAINT fk_s_teacher
+FOREIGN KEY(teacher_id)
+REFERENCES teacher(teacher_id);
+
+ALTER TABLE companies
+ADD CONSTANT pk_companies
+PRIMARY KEY(company_id);
+
+ALTER TABLE subject_areas ADD(
+	site_id		NUMBER(6)
+);
+
+ALTER TABLE trainers ADD(
+	site_id		NUMBER(6)
+);
+
+ALTER TABLE	sites
+ADD CONSTRAINT pk_sites
+PRIMARY KEY(site_id);
+
+ALTER TABLE subject_areas
+ADD CONSTRAINT fk_sa_sites
+FOREIGN KEY(site_id)
+REFERENCES sites(site_id);
+
+ALTER TABLE trainers
+ADD CONSTRAINT fk_t_sites
+FOREIGN KEY(site_id)
+REFERENCES sites(site_id);
+
+ALTER TABLE trainers ADD(
+	car_reg		VARCHAR2(20) NOT NULL
+);
+
+ALTER TABLE trainers DROP(
+	car_reg
+);
+
+ALTER TABLE trainers MODIFY(
+	contact_no		NUMBER(11) NOT NULL
+);
+
+ALTER TABLE sites ADD(
+	location	VARCHAR2(30)
+);
+
+--SELECT SEQUENCE_NAME FROM USER_SEQUENCES;(VIEW YOUR SEQUENCES)

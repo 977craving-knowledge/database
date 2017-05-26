@@ -1,9 +1,0 @@
---@E:\Bosco\database\Topic13\create12.1.txt;
-
---SANDESH GAUTAM
-
-CREATE TABLE subject_areas(
-	subject_id		NUMBER(6),
-	subject_name	VARCHAR2(20),
-	description		VARCHAR2(30)	
-);

@@ -1,18 +1,66 @@
+--@E:\Bosco\database\Topic13\create.txt
 
--- @E:\Bosco\database\Topic13\create.txt
+--SANDESH GAUTAM
 
 CREATE TABLE teacher(
-	teacher_id	NUMBER(6),
-	first_name	VARCHAR2(15) NOT NULL,
-	last_name	VARCHAR2(15),
-	gender		CHAR DEFAULT 'M'
+	teacher_id		NUMBER(6),
+	first_name		VARCHAR2(15) NOT NULL,
+	last_name		VARCHAR2(15),
+	gender			CHAR DEFAULT 'M'
 );
 
 CREATE TABLE student(
-	student_id	NUMBER(6),
-	first_name	VARCHAR2(15) NOT NULL,
-	last_name	VARCHAR2(15),
-	email_id	VARCHAR2(25) NOT NULL,
+	student_id		NUMBER(6),
+	first_name		VARCHAR2(15) NOT NULL,
+	last_name		VARCHAR2(15),
+	email_id		VARCHAR2(25) NOT NULL,
 	contact_number	NUMBER(10),
-	teacher_id	NUMBER(6)
+	teacher_id		NUMBER(6)
 );
+
+CREATE TABLE subject_areas(
+	subject_id		NUMBER(6),
+	subject_name	VARCHAR2(20),
+	description		VARCHAR2(30)	
+);
+
+CREATE TABLE trainers(
+	trainer_id		NUMBER(6),
+	t_firstname		VARCHAR2(15),
+	t_surname		VARCHAR2(15),
+	mentor_id		NUMBER(6),
+	contact_no		NUMBER(10),
+	rate			NUMBER(1,3)
+);
+
+CREATE TABLE sites(
+	site_id			NUMBER(5),
+	site_name		VARCHAR2(20)
+);
+
+CREATE TABLE companies(
+	company_id		NUMBER(6) NOT NULL,
+	company_name	VARCHAR2(20),
+	address			VARCHAR2(20),
+	contact_no		NUMBER(10)NOT NULL,
+	no_of_emp		NUMBER(6)
+);
+
+CREATE SEQUENCE seq_invoice
+INCREMENT BY 1
+START WITH 10000;
+
+CREATE SEQUENCE seq_trainers
+INCREMENT BY 1
+START WITH 101;
+
+CREATE SEQUENCE seq_sites
+INCREMENT BY 1
+START WITH 1;
+
+CREATE SEQUENCE seq_students
+INCREMENT BY 1
+START WITH 2000000
+MAXVALUE 3000000
+NOCYCLE
+CACHE 1000000;

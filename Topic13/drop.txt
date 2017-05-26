@@ -1,0 +1,23 @@
+--@E:\Bosco\database\Topic13\drop.txt;
+
+--SANDESH GAUTAM
+
+DROP SEQUENCE seq_invoice;
+
+DROP SEQUENCE seq_sites;
+
+DROP SEQUENCE seq_students;
+
+DROP SEQUENCE seq_trainers;
+
+DROP TABLE student;
+
+DROP TABLE teacher;
+
+DROP TABLE subject_areas;
+
+DROP TABLE trainers;
+
+DROP TABLE sites;
+
+DROP TABLE companies;

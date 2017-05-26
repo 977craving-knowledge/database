@@ -1,0 +1,11 @@
+--@E:\Bosco\database\Topic13\insert.txt
+
+--SANDESH GAUTAM
+
+--SELECT * FROM SITES;(VIEW THE TABLE)
+
+INSERT INTO sites
+VALUES(1, 'PARK CAMPUS', 'NORTHAMPTON');
+
+INSERT INTO trainers
+VALUES(seq_trainers.NEXTVAL, 'MANDY', 'MORRELL', NULL, 5.50, 0160473550);
