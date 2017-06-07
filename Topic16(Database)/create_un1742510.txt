@@ -1,0 +1,79 @@
+--@C:\Users\WORKSHOP-2\Desktop\Topic16(Database)\create_un17425103.txt
+
+CREATE  TABLE students (
+	student_id      	NUMBER(4),
+	student_firstname   	VARCHAR2(10),
+	student_surname   	VARCHAR2(12),
+	street			VARCHAR2(20),
+	city			VARCHAR2(15),
+	country			VARCHAR2(15),
+	tel_no          	VARCHAR2(15),
+	fax_no          	NUMBER(15),
+	gender       		VARCHAR2(1),
+	dob	   		DATE,
+	company_id		NUMBER(2));
+
+CREATE  TABLE trainers(
+	trainers_id      	NUMBER(4),
+	t_firstname  	 	VARCHAR2(10),
+	t_surname   		VARCHAR2(12),
+	mentor          	NUMBER(3),
+	rate			NUMBER(5,2),
+	contact_no         VARCHAR2(15));
+
+CREATE  TABLE companies (
+	company_id      NUMBER(2),
+	company_name    VARCHAR2(15),
+	city            VARCHAR2(12),
+	industry        VARCHAR2(15),
+	no_employees    NUMBER(5),
+	revenue         NUMBER(10),
+	training_budget NUMBER(6));
+
+
+CREATE  TABLE courses (
+	course_id       NUMBER(3),
+	title           VARCHAR2(30),
+	duration        NUMBER(2),
+	cost            NUMBER(5),
+	subject_id      NUMBER(2));
+	
+CREATE  TABLE subject_areas (
+	subject_id      NUMBER(2),
+	subject_name    VARCHAR2(30));
+
+
+CREATE  TABLE sites (
+	site_id         NUMBER(2),
+	address 	VARCHAR2(25),
+	location        VARCHAR2(12));
+
+
+CREATE  TABLE running_courses (
+	running_id     NUMBER(5),
+	course_id       NUMBER(3),
+	instructor_id   NUMBER(4),
+	site_id         NUMBER(2),
+	start_DATE      DATE,
+	max_no_students NUMBER(2));
+
+CREATE  TABLE attendances (
+	running_id     NUMBER(5),
+	student_id      NUMBER(4),
+	evaluation      VARCHAR2(1),
+	amount_paid     NUMBER(6,2));
+
+CREATE  TABLE invoice_items (
+	invoice_item		NUMBER(5),
+	student_surname		VARCHAR2(12), 
+	course_title		VARCHAR2(30),
+	start_DATE		DATE, 
+	end_DATE		DATE, 
+	amount			NUMBER(7,2) ,
+	invoice_NUMBER		NUMBER(6) );
+
+CREATE TABLE invoices(
+	invoice_NUMBER		NUMBER(6) ,
+	company_id		NUMBER(2) ,
+	billing_DATE		DATE default SYSDATE,
+	due_DATE		DATE default (SYSDATE + 30));

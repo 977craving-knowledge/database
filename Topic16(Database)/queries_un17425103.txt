@@ -1,0 +1,79 @@
+--@E:\Bosco\database\Topic16(Database)\queries_un17425103.txt
+
+--SELECT * FROM students;
+
+--SELECT student_firstname, tel_no FROM students;
+
+--SELECT  * FROM tab;
+
+SELECT student_firstname, tel_no FROM students
+WHERE country='UK';
+
+
+SELECT company_id, company_name, city, training_budget
+FROM companies
+WHERE COMPANY_ID = 40;
+
+SELECT company_id, company_name, city, training_budget
+FROM companies
+WHERE company_id <> 40;
+
+SELECT company_id, company_name, city, training_budget
+FROM companies
+WHERE company_id < 40;
+
+SELECT company_id, company_name, city, training_budget
+FROM companies
+WHERE company_id > 40;
+
+SELECT company_id, company_name, city, training_budget
+FROM companies
+WHERE company_id IN (40, 50, 60);
+
+SELECT company_id, company_name, city, training_budget
+FROM companies
+WHERE company_id != 40;
+
+SELECT company_id, company_name, city, training_budget
+FROM companies
+WHERE company_id BETWEEN 10 AND 30;
+
+SELECT company_id, company_name, city, training_budget
+FROM companies
+WHERE company_id NOT BETWEEN 10 AND 30;
+
+SELECT student_firstname, student_surname, city, country
+FROM students
+WHERE student_surname BETWEEN 'E%' AND 'T%';
+
+SELECT student_firstname, student_surname, city, country
+FROM students
+WHERE student_surname <'F%';
+
+SELECT student_firstname, student_surname, city, country
+FROM students
+WHERE student_surname LIKE  '%K%';
+
+SELECT student_firstname, student_surname, city, country
+FROM students
+WHERE student_surname LIKE '_OS%';
+
+SELECT student_firstname, student_surname, city, country
+FROM students
+WHERE student_surname LIKE '_O%E%';
+
+SELECT student_firstname, student_surname, city, country
+FROM students
+WHERE student_surname NOT LIKE '_O%';
+
+ SELECT student_firstname, student_surname, city, country, GENDER
+ FROM STUDENTS
+ WHERE DOB>'1-JAN-1981';
+ 
+ SELECT student_firstname, student_surname, city, country, GENDER
+ FROM STUDENTS
+ WHERE GENDER = '&SEX';
+ 
+ SELECT student_id, student_firstname, city, tel_no
+ FROM STUDENTS
+ WHERE STUDENT_SURNAME LIKE '&INITIAL%';

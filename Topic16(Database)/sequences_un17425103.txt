@@ -1,0 +1,10 @@
+--@C:\Users\WORKSHOP-2\Desktop\Topic16(Database)\sequences_un17425103.txt
+
+
+CREATE SEQUENCE seq_sites
+INCREMENT BY 1
+START WITH 1;
+
+CREATE SEQUENCE seq_trainers
+INCREMENT BY 1
+START WITH 99;

@@ -1,0 +1,51 @@
+
+--@C:\Users\WORKSHOP-2\Desktop\Topic16(Database)\alter_un17425103.txt
+
+ALTER TABLE sites
+MODIFY (location VARCHAR2(40));
+
+--Alter table
+ALTER TABLE trainers
+ADD (Car_Reg VARCHAR2(7));
+
+--NOT NULL constraint
+ALTER TABLE trainers
+MODIFY (contact_no NOT NULL);
+
+--Primary keys
+ALTER TABLE sites
+ADD CONSTRAINT pk_sites_id
+PRIMARY KEY (site_id);
+
+ALTER TABLE trainers
+ADD CONSTRAINT pk_trainers_id
+PRIMARY KEY (trainers_id);
+
+ALTER TABLE companies
+ADD CONSTRAINT pk_company_id
+PRIMARY KEY (company_id);
+
+--Unique keys
+ALTER TABLE trainers
+ADD CONSTRAINT uc_Car_Reg
+UNIQUE (Car_Reg);
+
+--FK
+ALTER TABLE students
+ADD CONSTRAINT fk_company_id
+FOREIGN KEY (company_id)
+REFERENCES COMPANIES(company_id);
+
+--CHECK 
+
+ALTER TABLE students
+ADD CONSTRAINT ck_student_firstname
+CHECK (student_firstname = UPPER(student_firstname));
+
+ALTER TABLE students
+ADD CONSTRAINT ck_student_surname
+CHECK (student_surname = UPPER(student_surname));
+
+ALTER TABLE courses
+ADD CONSTRAINT ck_duration
+CHECK (duration IN ('3','5'));
